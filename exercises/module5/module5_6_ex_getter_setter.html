@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+	<script type="text/babel">
+
+		class Person {
+			constructor(name,height){
+				this._name = name;
+				this._height = height;
+			}
+
+			get name() {
+				return this._name;
+			}
+
+			get height() {
+				return this._height;
+			}
+
+			set name(name) {
+				this._name = name;
+			}
+
+			set height(height) {
+				this._height = height;
+			}
+
+			info() {
+				console.log(`${this._name} height is ${this._height} cm`);
+			}
+		}
+
+		var p1 = new Person("Ally",170);
+		p1.info();
+		p1.name = "Alfred";
+		p1.height = 175;
+		p1.info();
+
+
+	</script>
+	<title>Promises</title>
+</head>
+<body>
+</body>	
+</html>
+
+
+
+
+
+

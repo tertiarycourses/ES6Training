@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	<script type="text/javascript">
+-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+   <script type="text/babel">
+
+   // Example 1: an immediately resolved promise
+   var p1 = Promise.resolve("foo"); 
+
+   p1.then((res) => console.log(res)); 
+
+   // Example 2: promise constructor
+   var p2 = new Promise(
+      (resolve, reject) => setTimeout(() => resolve(4), 2000)
+      );
+
+   p2.then((res) => console.log(res));
+
+   //Example 3:
+
+   const a = 2;
+   var p3 = new Promise(
+      (resolve,reject) => 
+         {
+            if (a==1) {resolve(1)}
+            else {reject("a is not 1")}
+         }
+      );
+
+   p3.then((res) => console.log(res),
+           (err) => console.log(err));
+
+
+	</script>
+</head>
+<body>
+
+</body>	
+</html>

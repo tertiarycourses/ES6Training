@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+	<script type="text/babel">
+
+		var num = [2,3,4,5];
+
+		for (var i of num) {
+			console.log(i);
+		}
+
+
+		var word = 'Javascript';
+
+		for (var i of word) {
+			console.log(i);
+		}
+
+		var map = new Map();
+
+		map.set('a',2);
+		map.set('b',3);
+		map.set('c',4); 
+
+		for (var i of map.keys()) {
+			console.log(i);
+		}
+
+		for (var i of map.values()) {
+			console.log(i);
+		}
+
+
+	</script>
+	<title>For / Of</title>
+</head>
+<body>	
+</body>	
+</html>

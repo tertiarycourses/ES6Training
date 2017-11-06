@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+	<script type="text/babel">
+
+		class Person {
+			constructor(name,height){
+				this.name = name;
+				this.height = height;
+			}
+
+			info() {
+				console.log(`${this.name} height is ${this.height} cm`);
+			}
+		}
+
+		class Student extends Person {
+			constructor(name,height,grade) {
+				super(name,height);
+				this.grade = grade;
+			}
+
+			result() {
+				console.log(`${this.name} grade is ${this.grade}`)
+		}
+	}
+
+		var p1 = new Student("Ally",170,3.5);
+		p1.info();
+		p1.result()
+
+
+	</script>
+	<title>Promises</title>
+</head>
+<body>
+</body>	
+</html>
+
+
+
+
+
+

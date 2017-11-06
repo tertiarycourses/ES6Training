@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+	<script type="text/babel">
+
+		var map = new Map([
+    		[false, 'no'],
+    		[true, 'yes'],
+			]);
+
+		//console.log(map);
+		console.log(map.get(false))
+
+		var map = new Map();
+		map.set(false,'no');
+		map.set(true,'yes');
+
+		console.log(map.get(false));
+		
+		var course = new Map();
+		//console.log(course);
+		course.set('angularjs', {description: 'JS framework by Google'});
+		course.set('reactjs', {description: 'JS framework by Facebook'});
+
+		console.log(course.get('reactjs'));
+
+	</script>
+	<title>Maps</title>
+</head>
+<body>
+</body>	
+</html>

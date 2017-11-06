@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+	<script type="text/babel">
+
+		class Rect {
+			constructor(length,width){
+				this._length = length;
+				this._width = width;
+			}
+
+			area() {
+				console.log(this._length*this._width);
+			}
+
+			get length() {
+        		return this._length;
+    		}
+
+
+    		set length(length) {
+       			 this._length= length;  
+    		}
+
+		}
+
+		var r1 = new Rect(5,4);
+		r1.area();
+		console.log(r1.length);
+		r1.length = 10;
+		r1.area();
+		console.log(r1.length);
+
+
+
+
+	</script>
+	<title>Promises</title>
+</head>
+<body>
+</body>	
+</html>
+
+
+
+
+
+
