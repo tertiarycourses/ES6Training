@@ -8,30 +8,35 @@
    <script type="text/babel">
 
    // Example 1: an immediately resolved promise
-   var p1 = Promise.resolve("foo"); 
+   var p1 = Promise.resolve('i got my iphone X ')
 
-   p1.then((res) => console.log(res)); 
+   p1.then(res => console.log(res))
 
    // Example 2: promise constructor
-   var p2 = new Promise(
-      (resolve, reject) => setTimeout(() => resolve(4), 2000)
-      );
 
-   p2.then((res) => console.log(res));
+   var p1 = new Promise(
+      (resolve,reject) => resolve('i got my iphone X')
+      )
+
+   p1.then(res => console.log(res))
 
    //Example 3:
 
-   const a = 2;
-   var p3 = new Promise(
-      (resolve,reject) => 
-         {
-            if (a==1) {resolve(1)}
-            else {reject("a is not 1")}
-         }
-      );
+   const keeppromise = true;
 
-   p3.then((res) => console.log(res),
-           (err) => console.log(err));
+    var p1 = new Promise(
+        (resolve,reject) => {
+          if(keeppromise) {
+            resolve('i got my phone')
+            }
+          else {
+            reject('i dont have my phone')
+            }
+          }
+        )
+
+    p1.then(res => console.log(res),
+            rej => console.log(rej)
 
 
 	</script>

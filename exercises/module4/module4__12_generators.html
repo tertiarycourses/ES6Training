@@ -20,6 +20,19 @@
 		console.log(action.next().value);
 		console.log(action.next().value);
 
+		function* ticketMachine() {
+			var i = 1000;
+			while(true) {
+			yield i;
+			i = i+1;
+			}
+		}
+
+		var ticket = ticketMachine()
+		for (let _=1;_<10;_++) {
+			console.log(ticket.next().value)
+		}
+
 	</script>
 	<title>Generators</title>
 </head>

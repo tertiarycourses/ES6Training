@@ -3,23 +3,18 @@
 <head>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
 	<script type="text/babel">
-		
-		function min(a,...b) {
-			var min = a;
-			//console.log(b);
-			for (var i in b) {
-				if (b[i]<min) {
-					min = b[i];
-				}
-			}
-			return min;
 
+	var add = (...x) => {
+		var sum = 0;
+		for (let i of x) {
+			sum = sum+i;
+		}
+		console.log(sum);
 	}
 
-	console.log(min(7,2,3,8))
-		
+	add(4,5,6,7)
 
-
+	
 	</script>
 </head>
 <body>

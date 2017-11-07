@@ -3,18 +3,15 @@
 <head>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
 	<script type="text/babel">
-		function createEmail(firstName, purchasePrice) {
-			var shipping = 5.95;
-			console.log(
-				`Hi ${firstName}, Thanks for buying from us!
-					Total: $${purchasePrice}
-					Shipping: $${shipping}
-					Grand Total: $${purchasePrice + shipping};
-				`	
-				);
+		function createMail(name,price) {
+		console.log(`
+		Hi ${name}, Thanks for buying from us!
+				Total: $${price}
+				Shipping: $5.95
+				Grand Total: $${price+5.95}`
+		)
 		}
-
-		createEmail("Gina", 100);
+		createMail("Gina",100)
 
 	</script>
 	<title>Template Strings</title>

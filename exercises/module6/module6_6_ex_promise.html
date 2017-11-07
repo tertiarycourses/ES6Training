@@ -1,46 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--
-	<script type="text/javascript">
--->
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
    <script type="text/babel">
 
-   const isMomHappy = true;
+    const keeppromise = true;
 
-   // Promise
-   const willIGetNewPhone = new Promise(
-    (resolve, reject) => { 
-        if (isMomHappy) {
-            const phone = {
-                brand: 'Samsung',
-                color: 'black'
-            };
-            resolve(phone);
-        } else {
-            const reason = new Error('mom is not happy');
-            reject(reason);
-        }
+    var p1 = new Promise(
+        (resolve,reject) => {
+          if(keeppromise) {
+            resolve('i got my phone')
+            }
+          else {
+            reject('i dont have my phone')
+            }
+          }
+        )
 
+    function happy(color,brand){
+      return `Hey friends, I got a ${color} ${brand} phone`
     }
-   );
 
-   const showOff = function (phone) {
-         const message = 'Hey friend, I have a new ' +
-                phone.color + ' ' + phone.brand + ' phone';
-         return Promise.resolve(message);
-   };
+    function sad(){
+      return 'Mom is not happy'
+    }
+    p1.then(res => console.log(happy('black','apple')),
+        rej => console.log(sad()))
 
-   // call our promise
-   const askMom = function () {
-      willIGetNewPhone
-        .then(showOff)
-        .then(fulfilled => console.log(fulfilled)) // fat arrow
-        .catch(error => console.log(error.message)); // fat arrow
-   };
-
-   askMom();
 	</script>
 </head>
 <body>
