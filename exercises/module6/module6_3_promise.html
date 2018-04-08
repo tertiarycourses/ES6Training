@@ -7,19 +7,27 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
    <script type="text/babel">
 
+/*
    // Example 1: an immediately resolved promise
    var p1 = Promise.resolve('i got my iphone X ')
 
    p1.then(res => console.log(res))
+
 
    // Example 2: promise constructor
 
    var p1 = new Promise(
       (resolve,reject) => resolve('i got my iphone X')
       )
+*/
+  var p1 = new Promise(
+      (resolve,reject) => reject("i did not get my iphoneX")
+      )
 
-   p1.then(res => console.log(res))
+   p1.then(res => console.log(res),
+           rej => console.log(rej))
 
+/*
    //Example 3:
 
    const keeppromise = true;
@@ -37,7 +45,7 @@
 
     p1.then(res => console.log(res),
             rej => console.log(rej)
-
+*/
 
 	</script>
 </head>

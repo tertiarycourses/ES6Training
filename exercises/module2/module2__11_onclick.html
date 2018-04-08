@@ -3,12 +3,17 @@
 <head>
 	<script type="text/javascript">
        function sayHello() {  
-            document.write ("Hello World")  
+            document.write ("Hello World")
+            //window.location = "http://www.google.com";   
          }  
+        function redirect() {  
+            window.location = "http://www.google.com";   
+         } 
 	</script>
 </head>
 <body>
    	<p> Click the following button and see result</p> 
   	<input type = "button" onclick = "sayHello()" value = "Say Hello" /> 
+  	<input type = "button" onclick = "redirect()" value = "Redirect" /> 
 </body>	
 </html>
